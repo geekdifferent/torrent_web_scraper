@@ -201,9 +201,9 @@ if __name__ == '__main__':
     #####################################################################
     # set you file path
     # For example: 
-    # JD = JsonParser("/home/pi/localbin/torrent_crawler_settings.json")
+    # JD = JsonParser("/home/pi/localbin/torrent_scraper_settings.json")
     #####################################################################
-    JD = JsonParser("/home/YOUR DIRECTORY/torrent_crawler_settings.json")
+    JD = JsonParser("/home/YOUR DIRECTORY/torrent_scraper_settings.json")
     
     for siteIdx in JD.get('torrent_site').keys():
         print("====================================\n=> Try to access site : ", siteIdx)
