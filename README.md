@@ -7,7 +7,7 @@ torrent_web_scraper는 매일 새로 업로드되는 예능 프로그램을 다�
 위해 토렌트 사이트를 돌아다니기 귀찮아서 제작을 구상하게 되었습니다.
 torrent_web_scraper의 동작 개념도는 아래와 같습니다.  
 
-![토렌트 자동 다운로드 torrent_web_scraper 개념도](https://geekdifferent.github.io/assets/images/2018-09-16-torrent-web-scraper-2-concept.jpg       ){: .align-center}
+![토렌트 자동 다운로드 torrent_web_scraper 개념도](https://geekdifferent.github.io/assets/images/2018-09-16-torrent-web-scraper-2-concept.jpg       )
 
 torrent_web_scraper를 실행하면, torrent_scraper_settings.json 파일에서 설정 내용을 가져옵니다. 설정파일에는 로컬 컴퓨터의
 transmission 정보와 다운로드를 진행할 TV 프로그램 정보가 담겨있습니다. 다운로드할 TV 프로그램 정보가 새로 업로드 되었는지
