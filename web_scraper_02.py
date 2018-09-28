@@ -22,7 +22,6 @@ class site_scraper:
         self.kortv_soc_id = JD.get('history').get("%s_kortv_soc" % (self.sitename))
 
     def saveNewLatestIDwithCate(self, category, newId):
-        #print("saveNewLatestIDwithCate : %s, id : %d" % (category, newId))
         tmp = self.JD.get('history')
         if category == 'kortv_ent':
             tmp.update(torrentmap_kortv_ent = newId)

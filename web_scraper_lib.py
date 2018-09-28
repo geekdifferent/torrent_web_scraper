@@ -2,8 +2,10 @@
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import subprocess
+import csv
 import re
 import json
+import os.path
 import pandas as pd
 import program_list
     
@@ -79,6 +81,27 @@ def add_magnet_transmission_remote(magnet_addr, JD):
     popen = subprocess.Popen(cmdArgs, stdin=subprocess.PIPE,
             stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     (stdoutdata, stderrdata) = popen.communicate()
+    return
+
+def check_magnet_history(csv_file, magnet):
+    if not os.path.isfile(csv_file):
+        return False
+
+    with open(csv_file, 'r') as f:
+        ff = csv.reader(f)
+        for row in ff:
+            if magnet == row[3]:
+                print("\t\t-> magnet was already downloaded at web_scraper_history.csv")
+                return True
+    return False
+
+def add_magnet_info_to_file(csv_file, runtime, sitename, title, magnet):
+
+    new = [runtime, sitename, title, magnet]
+    with open(csv_file, 'a') as f:
+        writer = csv.writer(f)
+        writer.writerow(new)
+    f.close()
     return
 
 class JsonParser:

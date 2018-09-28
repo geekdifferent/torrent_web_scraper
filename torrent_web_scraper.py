@@ -5,17 +5,14 @@ import web_scraper_01
 import web_scraper_02
 import web_scraper_lib
 
-#####################################################################
-# set you file path
-# For example: 
-# JD = JsonParser("/home/pi/localbin/web_scraper_settings.json")
-#####################################################################
-SETTING_FILE = "YOUR_FILE_PATH/web_scraper_settings.json"
-
 if __name__ == '__main__':
 
-    print("%s is going to work at %s." % (os.path.basename(__file__), dtime.now()))
-    
+    SETTING_PATH = os.path.realpath(os.path.dirname(__file__))+"/"
+    SETTING_FILE = SETTING_PATH+"web_scraper_settings.json"
+    HISTORY_FILE = SETTING_PATH+"web_scraper_history.csv"
+    runTime = dtime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    print("%s is going to work at %s." % (os.path.basename(__file__), runTime))
     JD = web_scraper_lib.JsonParser(SETTING_FILE)
     webpage_max = JD.get('page_scrwap_max')
   
@@ -32,7 +29,6 @@ if __name__ == '__main__':
         
         #Step 2. Iterate category for this site
         for cateIdx in web_scraper_lib.getCateList():
-            #print(cateIdx)
         
         #Step 3. setup Latest Id for this site/this category
             needNewLatestId = True
@@ -40,13 +36,9 @@ if __name__ == '__main__':
         
         #Step 4. iterate page (up to 10) for this site/this category
             for count in range(1, webpage_max+1):
-                #print(cateIdx, count)
-                
                 needKeepgoing = True
                 cateIdxNo = web_scraper_lib.getCateIdxFromStr(cateIdx)
-                
                 url = scraper.getScrapUrl(cateIdxNo, count)
-                        
                 boardList = scraper.getParseData(url)
              
                 #for board in boardList:
@@ -79,11 +71,17 @@ if __name__ == '__main__':
 
                     print("\t[%s][%s][%d][p. %d] - %s" % (scraper.sitename, cateIdx, boardIdNum, count, title))
                     #print("\t%s" % href)
-                
+
                     magnet = scraper.getmagnetDataFromPageUrl(href)
                     #print("\t%s" % magnet)
 
-                    web_scraper_lib.add_magnet_transmission_remote(magnet, JD)
+                    #magnet was already downloaded.
+                    if web_scraper_lib.check_magnet_history(HISTORY_FILE, magnet):
+                        continue
+
+                    #web_scraper_lib.add_magnet_transmission_remote(magnet, JD)
+                    web_scraper_lib.add_magnet_info_to_file(HISTORY_FILE,
+                            runTime, scraper.sitename, title, magnet)
 
                 if not needKeepgoing:
                     break
