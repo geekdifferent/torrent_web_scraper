@@ -17,7 +17,16 @@ if __name__ == '__main__':
     webpage_max = JD.get('page_scrwap_max')
   
     # This list is to scrap websites.
-    siteList = [web_scraper_01, web_scraper_02]
+    siteList = []
+
+    if JD.get('enable-torrentboza') == "True":
+        siteList.append(web_scraper_01)
+    if JD.get('enable-torrentmap') == "True":
+        siteList.append(web_scraper_02)
+
+    if len(siteList) == 0:
+        print("Wrong, we should choice at least one analyzer.")
+        exit()
  
     for site in siteList:
         scraper = site.site_scraper(JD)
