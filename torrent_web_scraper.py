@@ -88,7 +88,7 @@ if __name__ == '__main__':
                     if web_scraper_lib.check_magnet_history(HISTORY_FILE, magnet):
                         continue
 
-                    #web_scraper_lib.add_magnet_transmission_remote(magnet, JD)
+                    web_scraper_lib.add_magnet_transmission_remote(magnet, JD)
                     web_scraper_lib.add_magnet_info_to_file(HISTORY_FILE,
                             runTime, scraper.sitename, title, magnet)
 

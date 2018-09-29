@@ -7,8 +7,8 @@ import re
 import json
 import os.path
 import pandas as pd
-import program_list
-    
+import web_scraper_program_list
+
 categoryList = [ "kortv_ent", "kortv_social" ]
 
 def getBsObj(addr):
@@ -61,7 +61,7 @@ def checkVersionWithTitle(release, targetString):
 
 def checkTitleWithProgramList(targetString):
     targetString = targetString.lower()
-    for prog in program_list.title_list:
+    for prog in web_scraper_program_list.title_list:
         title = prog[0].lower()
         resolution = prog[1]
         release = prog[2]
