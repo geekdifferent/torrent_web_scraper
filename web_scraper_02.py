@@ -92,6 +92,12 @@ class site_scraper:
 
     def getmagnetDataFromPageUrl(self, url):
         bsObj = web_scraper_lib.getBsObj(url)
-        magnet = bsObj.find('section', attrs={'id' : 'bo_v_file'}).find('a', href=re.compile(".*magnet.*"))
-        magnet = magnet.get('href') 
+        magnetCandList = bsObj.find_all('section', attrs={'id' : 'bo_v_file'})
+
+        for item in magnetCandList:
+            magnetItem = item.find('a', href=re.compile(".*magnet.*"))
+            if not magnetItem == None:
+                magnet = magnetItem.get('href')
+                break
+
         return magnet 
