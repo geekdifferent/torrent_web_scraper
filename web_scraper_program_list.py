@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 title_list =[
         [ "라디오스타",        ["720"],           ["NEXT"] ],
         [ "썰전",              [None],            ["NEXT"] ],

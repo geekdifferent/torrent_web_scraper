@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 from datetime import datetime as dtime
 import os
 import web_scraper_01

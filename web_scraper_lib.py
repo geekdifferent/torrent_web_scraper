@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import subprocess
@@ -6,7 +6,6 @@ import csv
 import re
 import json
 import os.path
-import pandas as pd
 import web_scraper_program_list
 
 categoryList = [ "kortv_ent", "kortv_social" ]
