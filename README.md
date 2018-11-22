@@ -7,7 +7,6 @@ TV 프로그램을 다운로드 받기 위해 매번 토렌트 사이트를 접�
 **토렌트 자동 다운로드 프로젝트 - torrent_web_scraper 실행 환경**  
 실행 OS : 리눅스 - 우분투, 라즈베리파이(라즈비안) 등   
 실행 언어 : Python3
-{: .notice--info}
 
 ## 1. torrent_web_scraper 소개하기
 
