@@ -15,7 +15,7 @@ torrent_web_scraper는 매일 새로 업로드되는 예능 프로그램을 다�
 torrent_web_scraper의 동작 개념도는 아래와 같습니다.  
 
 
-![토렌트 자동 다운로드 torrent_web_scraper 개념도](https://geekdifferent.github.io/assets/images/2018-09-16-torrent-web-scraper-2-concept.jpg       )
+![토렌트 자동 다운로드 torrent_web_scraper 개념도](https://geeksvoyage.com/assets/images/2018-09-16-torrent-web-scraper-2-concept.jpg       )
 
 torrent_web_scraper를 실행하면, web_scraper_settings.json 파일과 web_scraper_program_list.py 파일에서 설정 내용을 
 가져옵니다. web_scraper_settings.json 파일에는 로컬 컴퓨터의 transmission 정보가 담겨있고 
@@ -35,5 +35,5 @@ torrent_web_scraper는 파이썬3 기반으로 작성되었으며, 리눅스 기
 **주의** 토렌트 사이트를 웹 스크래핑하는 것은 불법이 아닙니다. 하지만, 토렌트를 사용하여 TV 프로그램 동영상을
 다운로드하는 것은 저작권을 침해하는 불법 행위입니다. 이점을 이해하고 torrent_web_scraper 스크립트를 실행 여부를 결정하세요.
 
-[torrent_web_scraper 설치 및 사용법](https://geekdifferent.github.io/raspberry%20pi/torrent-web-scraper/) 보러가기
+[torrent_web_scraper 설치 및 사용법](https://geeksvoyage.com/raspberry%20pi/torrent-web-scraper/) 보러가기
 
