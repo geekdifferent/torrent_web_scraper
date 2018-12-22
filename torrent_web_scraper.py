@@ -6,6 +6,8 @@ import web_scraper_01
 import web_scraper_02
 import web_scraper_lib
 
+__version__ = 'v1.00'
+
 if __name__ == '__main__':
 
     SETTING_PATH = os.path.realpath(os.path.dirname(__file__))+"/"
@@ -13,7 +15,8 @@ if __name__ == '__main__':
     HISTORY_FILE = SETTING_PATH+"web_scraper_history.csv"
     runTime = dtime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    print("%s is going to work at %s." % (os.path.basename(__file__), runTime))
+    print("%s %s is going to work at %s." % (os.path.basename(__file__),
+        __version__, runTime))
     JD = web_scraper_lib.JsonParser(SETTING_FILE)
     webpage_max = JD.get('page_scrwap_max')
   
