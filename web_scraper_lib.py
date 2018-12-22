@@ -97,7 +97,7 @@ def check_magnet_history(csv_file, magnet):
 def add_magnet_info_to_file(csv_file, runtime, sitename, title, magnet):
 
     new = [runtime, sitename, title, magnet]
-    with open(csv_file, 'a') as f:
+    with open(csv_file, 'a', newline = '\n') as f:
         writer = csv.writer(f)
         writer.writerow(new)
     f.close()
