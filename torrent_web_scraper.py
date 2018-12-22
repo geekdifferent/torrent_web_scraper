@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from datetime import datetime as dtime
 import os
+import sys
 import web_scraper_01
 import web_scraper_02
 import web_scraper_lib
@@ -26,7 +27,7 @@ if __name__ == '__main__':
 
     if len(siteList) == 0:
         print("Wrong, we should choice at least one analyzer.")
-        exit()
+        sys.exit()
  
     for site in siteList:
         scraper = site.site_scraper(JD)
@@ -94,8 +95,8 @@ if __name__ == '__main__':
 
                 if not needKeepgoing:
                     break
-        
+
         #Step 5. save scrap ID
             scraper.saveNewLatestIDwithCate(cateIdx, newLatestId)
-        
-    exit()
+
+    sys.exit()

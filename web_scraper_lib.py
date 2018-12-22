@@ -3,6 +3,7 @@ from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import subprocess
 import csv
+import sys
 import re
 import json
 import os.path
@@ -111,7 +112,7 @@ class JsonParser:
         except FileNotFoundError as e:
             print(str(e))
             print("Please, set your file path.")
-            exit()
+            sys.exit()
         else:
             self.data = json.load(dataFile)
             dataFile.close()
