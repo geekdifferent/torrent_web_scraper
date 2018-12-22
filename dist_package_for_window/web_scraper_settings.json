@@ -1,0 +1,14 @@
+{
+    "enable-torrentboza": "True",
+    "enable-torrentmap": "True",
+    "history": {
+        "torrentboza_kortv_ent": 0,
+        "torrentboza_kortv_soc": 0,
+        "torrentmap_kortv_ent": 0,
+        "torrentmap_kortv_soc": 0 
+    },
+    "page_scrwap_max": 10,
+    "trans-id": "YOUR_TORRENT_ID",
+    "trans-port": "YOUR_TORRENT_PORT",
+    "trans-pw": "YOUR_TORRENT_PW"
+}
