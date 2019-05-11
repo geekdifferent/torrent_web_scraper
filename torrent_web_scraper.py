@@ -4,6 +4,7 @@ import os
 import sys
 import web_scraper_01
 import web_scraper_02
+import web_scraper_03
 import web_scraper_lib
 
 __version__ = 'v1.00'
@@ -27,6 +28,8 @@ if __name__ == '__main__':
         siteList.append(web_scraper_01)
     if JD.get('enable-torrentmap') == "True":
         siteList.append(web_scraper_02)
+    if JD.get('enable-torrentdal') == "True":
+        siteList.append(web_scraper_03)
 
     if len(siteList) == 0:
         print("Wrong, we should choice at least one analyzer.")

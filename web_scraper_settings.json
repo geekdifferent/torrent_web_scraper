@@ -1,11 +1,14 @@
 {
     "enable-torrentboza": "True",
-    "enable-torrentmap": "True",
+    "enable-torrentdal": "True",
+    "enable-torrentmap": "False",
     "history": {
         "torrentboza_kortv_ent": 0,
         "torrentboza_kortv_soc": 0,
+        "torrentdal_kortv_ent": 0,
+        "torrentdal_kortv_soc": 0,
         "torrentmap_kortv_ent": 0,
-        "torrentmap_kortv_soc": 0 
+        "torrentmap_kortv_soc": 0
     },
     "page_scrwap_max": 10,
     "trans-id": "YOUR_TORRENT_ID",
