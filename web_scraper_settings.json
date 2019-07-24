@@ -1,17 +1,31 @@
 {
-    "enable-torrentboza": "True",
-    "enable-torrentdal": "True",
+    "download-base": "/media/tvshows",
+    "enable-torrentboza": "False",
+    "enable-torrentdal": "False",
     "enable-torrentmap": "False",
+    "enable-torrentwal": "True",
     "history": {
         "torrentboza_kortv_ent": 0,
         "torrentboza_kortv_soc": 0,
         "torrentdal_kortv_ent": 0,
         "torrentdal_kortv_soc": 0,
         "torrentmap_kortv_ent": 0,
-        "torrentmap_kortv_soc": 0
+        "torrentmap_kortv_soc": 0,
+        "torrentwal_kortv_dra": 0,
+        "torrentwal_kortv_ent": 0,
+        "torrentwal_kortv_soc": 0,
+        "torrentwal_movie": 0
     },
-    "page_scrwap_max": 10,
-    "trans-id": "YOUR_TORRENT_ID",
-    "trans-port": "YOUR_TORRENT_PORT",
-    "trans-pw": "YOUR_TORRENT_PW"
+    "movie": {
+        "download": "/media/movies",
+        "list": "movie_list.txt",
+        "ranking": 8,
+        "resolution": "1080",
+        "video_codec": "264"
+    },
+    "page_scrwap_max": 1,
+    "trans-host": "",
+    "trans-id": "",
+    "trans-port": "9091",
+    "trans-pw": ""
 }
