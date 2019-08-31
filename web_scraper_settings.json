@@ -1,5 +1,5 @@
 {
-    "download-base": "/media/tvshows",
+    "download-base": "/home/pi/Torrent_download/",
     "enable-torrentboza": "False",
     "enable-torrentdal": "False",
     "enable-torrentmap": "False",
@@ -17,15 +17,15 @@
         "torrentwal_movie": 0
     },
     "movie": {
-        "download": "/media/movies",
+        "download": "/home/pi/Torrent_download/movie/",
         "list": "movie_list.txt",
         "ranking": 8,
         "resolution": "1080",
         "video_codec": "264"
     },
     "page_scrwap_max": 1,
-    "trans-host": "",
-    "trans-id": "",
+    "trans-host": "192.168.0.11",
+    "trans-id": "pi",
     "trans-port": "9091",
-    "trans-pw": ""
+    "trans-pw": "transpw"
 }
