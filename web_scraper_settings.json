@@ -1,5 +1,6 @@
 {
-    "download-base": "/home/pi/Torrent_download/",
+    "download-base": "/home/pi/S_Samba/X_Torrent/Download_box",
+    "enable-download-base": "False",
     "enable-torrentboza": "False",
     "enable-torrentdal": "False",
     "enable-torrentmap": "False",
@@ -11,21 +12,21 @@
         "torrentdal_kortv_soc": 0,
         "torrentmap_kortv_ent": 0,
         "torrentmap_kortv_soc": 0,
-        "torrentwal_kortv_dra": 0,
-        "torrentwal_kortv_ent": 0,
-        "torrentwal_kortv_soc": 0,
-        "torrentwal_movie": 0
+        "torrentwal_kortv_dra": 170260,
+        "torrentwal_kortv_ent": 899487,
+        "torrentwal_kortv_soc": 104877,
+        "torrentwal_movie": 372953
     },
     "movie": {
-        "download": "/home/pi/Torrent_download/movie/",
+        "download": "/home/pi/S_Samba/X_Torrent/Download_box/movie/",
         "list": "movie_list.txt",
         "ranking": 8,
         "resolution": "1080",
         "video_codec": "264"
     },
-    "page_scrwap_max": 1,
+    "page_scrwap_max": 10,
     "trans-host": "192.168.0.11",
     "trans-id": "pi",
-    "trans-port": "9091",
+    "trans-port": "59090",
     "trans-pw": "transpw"
 }
