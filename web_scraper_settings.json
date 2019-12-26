@@ -4,7 +4,8 @@
     "enable-torrentboza": "False",
     "enable-torrentdal": "False",
     "enable-torrentmap": "False",
-    "enable-torrentwal": "True",
+    "enable-torrentview": "True",
+    "enable-torrentwal": "False",
     "history": {
         "torrentboza_kortv_ent": 0,
         "torrentboza_kortv_soc": 0,
@@ -12,10 +13,12 @@
         "torrentdal_kortv_soc": 0,
         "torrentmap_kortv_ent": 0,
         "torrentmap_kortv_soc": 0,
-        "torrentwal_kortv_dra": 170260,
-        "torrentwal_kortv_ent": 899487,
-        "torrentwal_kortv_soc": 104877,
-        "torrentwal_movie": 372953
+        "torrentview_kortv_ent": 0,
+        "torrentview_kortv_soc": 0,
+        "torrentwal_kortv_dra": 0,
+        "torrentwal_kortv_ent": 0,
+        "torrentwal_kortv_soc": 0,
+        "torrentwal_movie": 0
     },
     "movie": {
         "download": "/home/pi/S_Samba/X_Torrent/Download_box/movie/",
@@ -25,8 +28,8 @@
         "video_codec": "264"
     },
     "page_scrwap_max": 10,
-    "trans-host": "192.168.0.11",
-    "trans-id": "pi",
-    "trans-port": "59090",
-    "trans-pw": "transpw"
+    "trans-host": "Your server IP"
+    "trans-id": "Your server ID",
+    "trans-port": "Your server port",
+    "trans-pw": "Your server PW"
 }

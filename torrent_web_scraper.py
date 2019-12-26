@@ -6,6 +6,7 @@ import web_scraper_01
 import web_scraper_02
 import web_scraper_03
 import web_scraper_04
+import web_scraper_05
 import web_scraper_lib
 
 __version__ = 'v1.00'
@@ -34,6 +35,8 @@ if __name__ == '__main__':
         siteList.append(web_scraper_03)
     if  JD.get('enable-torrentwal') == "True":
         siteList.append(web_scraper_04)
+    if  JD.get('enable-torrentview') == "True":
+        siteList.append(web_scraper_05)
 
     if len(siteList) == 0:
         print("Wrong, we should choice at least one analyzer.")
