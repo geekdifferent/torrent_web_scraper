@@ -24,10 +24,10 @@ class site_scraper:
     def saveNewLatestIDwithCate(self, category, newId):
         tmp = self.JD.get('history')
         if category == 'kortv_ent':
-            tmp.update(torrentmap_kortv_ent = newId)
+            tmp.update(torrentview_kortv_ent = newId)
             self.kortv_ent_id = newId
         elif category == 'kortv_social':
-            tmp.update(torrentmap_kortv_soc = newId)
+            tmp.update(torrentview_kortv_soc = newId)
             self.kortv_soc_id = newId
         else:
             print("Something Wrong, category = %s" % category)
