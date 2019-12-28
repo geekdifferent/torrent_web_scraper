@@ -8,17 +8,17 @@ import web_scraper_lib
 import sys
 
 webpage_addr = [
-        "https://torrentwal.com/torrent_variety/torrent",
-        "https://torrentwal.com/torrent_docu/torrent",
-        "https://torrentwal.com/torrent_tv/torrent",
-        "https://torrentwal.com/torrent_movie/torrent"
+        "https://torrentwal2.com/torrent_variety/torrent",
+        "https://torrentwal2.com/torrent_docu/torrent",
+        "https://torrentwal2.com/torrent_tv/torrent",
+        "https://torrentwal2.com/torrent_movie/torrent"
         ]
 
 class site_scraper:
     def __init__(self, JD):
         self.sitename = "torrentwal"
         self.name = "web_scraper_04"
-        self.mainUrl = "https://torrentwal.com"
+        self.mainUrl = "https://torrentwal2.com"
         self.JD = JD
 
         self.kortv_ent_id = JD.get('history').get("%s_kortv_ent" % (self.sitename))
