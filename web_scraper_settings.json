@@ -5,7 +5,7 @@
     "enable-torrentdal": "False",
     "enable-torrentmap": "False",
     "enable-torrentview": "True",
-    "enable-torrentwal": "True",
+    "enable-torrentwal": "False",
     "history": {
         "torrentboza_kortv_ent": 0,
         "torrentboza_kortv_soc": 0,
