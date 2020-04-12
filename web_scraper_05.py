@@ -7,15 +7,15 @@ import json
 import web_scraper_lib
 
 webpage_addr = [
-        "https://torrentview7.net/bbs/board.php?bo_table=enter&page=",
-        "https://torrentview7.net/bbs/board.php?bo_table=tv&page="
+        "https://torrentview8.net/bbs/board.php?bo_table=enter&page=",
+        "https://torrentview8.net/bbs/board.php?bo_table=tv&page="
         ]
 
 class site_scraper:
     def __init__(self, JD):
         self.sitename = "torrentview"
         self.name = "web_scraper_05"
-        self.mainUrl = "https://torrentview7.net"
+        self.mainUrl = "https://torrentview8.net"
         self.JD = JD
 
         self.kortv_ent_id = JD.get('history').get("%s_kortv_ent" % (self.sitename))
