@@ -7,15 +7,15 @@ import json
 import web_scraper_lib
 
 webpage_addr = [
-        "https://torrentview10.net/bbs/board.php?bo_table=enter&page=",
-        "https://torrentview10.net/bbs/board.php?bo_table=tv&page="
+        "https://torrentview13.net/bbs/board.php?bo_table=enter&page=",
+        "https://torrentview13.net/bbs/board.php?bo_table=tv&page="
         ]
 
 class site_scraper:
     def __init__(self, JD):
         self.sitename = "torrentview"
         self.name = "web_scraper_05"
-        self.mainUrl = "https://torrentview10.net"
+        self.mainUrl = "https://torrentview13.net"
         self.JD = JD
 
         self.kortv_ent_id = JD.get('history').get("%s_kortv_ent" % (self.sitename))
@@ -96,10 +96,12 @@ class site_scraper:
 
     def getmagnetDataFromPageUrl(self, url):
         bsObj = web_scraper_lib.getBsObj(url)
+        magnet = None
         if not bsObj == None:
             magnetItem = bsObj.find('a', href=re.compile(".*magnet.*"))
             print(magnetItem)
-            magnet = magnetItem.get('href')
-            print(magnet)
+            if not magnetItem == None:
+                magnet = magnetItem.get('href')
+                print(magnet)
 
         return magnet

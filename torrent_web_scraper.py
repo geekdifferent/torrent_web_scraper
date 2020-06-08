@@ -110,6 +110,8 @@ if __name__ == '__main__':
 
                     magnet = scraper.getmagnetDataFromPageUrl(href)
                     #print("\t%s" % magnet)
+                    if magnet == None:
+                        continue
 
                     #magnet was already downloaded.
                     if web_scraper_lib.check_magnet_history(HISTORY_FILE, magnet):
