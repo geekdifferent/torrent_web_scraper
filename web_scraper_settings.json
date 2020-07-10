@@ -3,9 +3,9 @@
     "enable-download-base": "False",
     "enable-torrentboza": "False",
     "enable-torrentdal": "False",
-    "enable-torrentgee": "True",
+    "enable-torrentgee": "False",
     "enable-torrentmap": "False",
-    "enable-torrentview": "False",
+    "enable-torrentview": "True",
     "enable-torrentwal": "False",
     "history": {
         "torrentboza_kortv_ent": 0,
