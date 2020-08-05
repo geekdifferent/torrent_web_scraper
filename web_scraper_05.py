@@ -8,7 +8,8 @@ import web_scraper_lib
 
 webpage_addr = [
         "https://torrentview17.net/bbs/board.php?bo_table=enter&page=",
-        "https://torrentview17.net/bbs/board.php?bo_table=tv&page="
+        "https://torrentview17.net/bbs/board.php?bo_table=tv&page=",
+        "https://torrentview17.net/bbs/board.php?bo_table=drama&page="
         ]
 
 class site_scraper:
@@ -20,6 +21,7 @@ class site_scraper:
 
         self.kortv_ent_id = JD.get('history').get("%s_kortv_ent" % (self.sitename))
         self.kortv_soc_id = JD.get('history').get("%s_kortv_soc" % (self.sitename))
+        self.kortv_dra_id = JD.get('history').get("%s_kortv_dra" % (self.sitename))
 
     def saveNewLatestIDwithCate(self, category, newId):
         tmp = self.JD.get('history')
@@ -29,6 +31,9 @@ class site_scraper:
         elif category == 'kortv_social':
             tmp.update(torrentview_kortv_soc = newId)
             self.kortv_soc_id = newId
+        elif category == 'kortv_dra':
+            tmp.update(torrentview_kortv_dra = newId)
+            self.kortv_dra_id = newId
         else:
             print("Something Wrong, category = %s" % category)
 

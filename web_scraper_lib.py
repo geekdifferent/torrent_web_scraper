@@ -13,7 +13,7 @@ import web_scraper_program_list
 #categoryList = [ "kortv_ent", "kortv_social", "kortv_dra", "movie" ]
 #categoryList = [ "kortv_ent", "kortv_social", "drama", "mov" ]
 #이 부분은 각 scraper 쪽으로 옮겨져야 함.
-categoryList = [ "kortv_ent", "kortv_social"]
+categoryList = [ "kortv_ent", "kortv_social", "kortv_dra"]
 
 def getBsObj(addr):
     req = Request(addr, headers={'User-Agent': 'Mozilla/5.0'})
